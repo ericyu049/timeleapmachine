@@ -1,0 +1,11 @@
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    width: calc(100% - 80px);
+    padding-left: 40px;
+    padding-right: 40px;
+    border-bottom: solid 1px;
+}

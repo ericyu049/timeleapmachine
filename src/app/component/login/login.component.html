@@ -1,0 +1,25 @@
+<div class="componentWrapper centerAll">
+    <mat-card class="loginContainer">
+        <mat-card-content class="centerAll">
+            <!--logo-->
+            <img width="150" class="image" src="/assets/logo.svg">
+            <!--login -form-->
+            <form class="centerAll" [formGroup]="loginForm" (ngSubmit)="login()">
+                <!--username-->
+                <mat-form-field class="inputfield" appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input matInput formControlName="username">
+                </mat-form-field>
+
+                <!--password-->
+                <mat-form-field class="inputfield" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="password">
+                </mat-form-field>
+
+                <!--submit button-->
+                <button mat-raised-button class="actionButton">Login</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
