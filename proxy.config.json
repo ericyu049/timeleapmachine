@@ -1,6 +1,6 @@
 {
     "/auth": {
-        "target": "http://localhost:8658",
+        "target": "http://192.168.1.57:8658",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug",
