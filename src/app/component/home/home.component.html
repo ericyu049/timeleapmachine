@@ -17,7 +17,7 @@
                 <h3 *ngIf="!selectedPlace.GRADE">Condition: -</h3>
             </div>
             <div class="right">
-                <button mat-raised-button>LIKE</button>
+                <button mat-raised-button (click)="saveHouse()">LIKE</button>
                 <span style="padding-left: 8px;"></span>
                 <button mat-raised-button>SHARE</button>
             </div>

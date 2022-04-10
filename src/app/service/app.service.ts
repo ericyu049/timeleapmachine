@@ -7,7 +7,15 @@ export class AppService {
 
     }
     getData() {
-        const url = "/assets/data.json" 
+        const url = "/assets/data.json" ;
         return this.http.get(url, {reportProgress: true, responseType: "json"});
+    }
+    saveHouse(request) {
+        const url = "/api/savehouse";
+        return this.http.post(url, request, {reportProgress: true, responseType: "json"});
+    }
+    getHouse(request) {
+        const url = "/api/getHouse";
+        return this.http.post(url, request, {reportProgress: true, responseType: "json"});
     }
 }

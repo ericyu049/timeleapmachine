@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
         this.loginService.login(this.loginForm.value).subscribe({
             next: (data: LoginResponse) => {
                 if (data.rspCde === 0) {
+                    document.cookie = "ai-amadeus.auth=" + data.token + "; ai-amadeus.reauth=" + data.refreshToken;
                     this.router.navigate(['/dashboard']);
                 }
             },
