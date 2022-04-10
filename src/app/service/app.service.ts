@@ -15,7 +15,7 @@ export class AppService {
         return this.http.post(url, request, {reportProgress: true, responseType: "json"});
     }
     getHouse(request) {
-        const url = "/api/getHouse";
+        const url = "/api/getHouses";
         return this.http.post(url, request, {reportProgress: true, responseType: "json"});
     }
 }
