@@ -1,13 +1,13 @@
 {
     "/auth": {
-        "target": "http://192.168.1.57:8658",
+        "target": "http://localhost:8080",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug",
         "pathRewrite": { "^/auth" : "" }
     },
     "/api": {
-        "target": "http://192.168.1.57:8658",
+        "target": "http://localhost:8080",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug",

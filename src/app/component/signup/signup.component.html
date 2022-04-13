@@ -1,0 +1,38 @@
+<div class="componentWrapper centerAll">
+    <mat-card class="signupContainer">
+        <mat-card-content class="centerAll">
+            <!--logo-->
+            <img width="150" class="image" src="/assets/logo.svg">
+            <!--signup -form-->
+            <form class="centerAll" style="padding-bottom: 15px" [formGroup]="signupForm" (ngSubmit)="signup()">
+                <!--username-->
+                <mat-form-field class="inputfield" appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input matInput formControlName="username">
+                </mat-form-field>
+
+                <!--password-->
+                <mat-form-field class="inputfield" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="password">
+                </mat-form-field>
+
+                <!-- re-password -->
+                <mat-form-field class="inputfield" appearance="outline">
+                    <mat-label>Re-enter Password</mat-label>
+                    <input matInput type="password" formControlName="repassword">
+                </mat-form-field>
+
+                <!--email-->
+                <mat-form-field class="inputfield" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" formControlName="email">
+                </mat-form-field>
+
+                <!--submit button-->
+                <button mat-raised-button color="primary" class="actionButton">SIGN UP</button>
+            </form>
+            <div style="padding-top: 15px;">Already have an account? Sign in <a routerLink="/login">here</a></div>
+        </mat-card-content>
+    </mat-card>
+</div>

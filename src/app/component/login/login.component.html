@@ -4,7 +4,7 @@
             <!--logo-->
             <img width="150" class="image" src="/assets/logo.svg">
             <!--login -form-->
-            <form class="centerAll" [formGroup]="loginForm" (ngSubmit)="login()">
+            <form class="centerAll" style="padding-bottom: 15px" [formGroup]="loginForm" (ngSubmit)="login()">
                 <!--username-->
                 <mat-form-field class="inputfield" appearance="outline">
                     <mat-label>Username</mat-label>
@@ -17,9 +17,15 @@
                     <input matInput type="password" formControlName="password">
                 </mat-form-field>
 
+                <!-- <span><a style="align-self: flex-end">Forgot your password?</a></span> -->
+
                 <!--submit button-->
-                <button mat-raised-button class="actionButton">Login</button>
+                <button mat-raised-button color="primary" class="actionButton">LOGIN</button>
             </form>
+
+            <div style="padding-top: 15px;">Don't have an account? <a routerLink="/signup">Create an account</a></div>
+            <div style="padding-top: 15px;"><a routerLink="/home">Forgot Password</a></div>
+
         </mat-card-content>
     </mat-card>
 </div>

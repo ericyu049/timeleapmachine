@@ -1,0 +1,27 @@
+.signupContainer {
+    height: 600px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.centerAll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.inputfield, .actionButton {
+    width: 300px;
+}
+.image {
+    padding-bottom: 35px;
+}
+.componentWrapper {
+    height: 100%;
+    width: 100%;
+    background-color: #e9e9e9;
+}

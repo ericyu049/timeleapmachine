@@ -8,6 +8,16 @@ export interface LoginResponse{
     token: string,
     refreshToken: string
 }
+export interface SignUpRequest {
+    uuid: any,
+    username: string,
+    password: string,
+    email: string
+}
+export interface SignUpResponse {
+    rspCde: number,
+    rspMsg: string
+}
 export interface RefreshTokenRequest {
     refreshToken: string;
 }

@@ -6,28 +6,11 @@ import { AppService } from "src/app/service/app.service";
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
-    selectedPlace;
+export class HomeComponent implements OnInit {;
     constructor(private service: AppService) {
 
     }
     ngOnInit(): void {
 
-    }
-    handleSelectedPlace(event) {
-        console.log('selected: ', event);
-        this.selectedPlace = event;
-    }
-    saveHouse() {
-        const request = {
-            username: 'demo',
-            house: this.selectedPlace.FULLADDRESS
-        }
-        this.service.saveHouse(request).subscribe({
-            next: (data) => {
-                console.log('data: ', data)
-            },
-            error: (error) => {console.log('error: ', error)}
-        });
     }
 }
