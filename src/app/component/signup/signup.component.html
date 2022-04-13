@@ -2,7 +2,7 @@
     <mat-card class="signupContainer">
         <mat-card-content class="centerAll">
             <!--logo-->
-            <img width="150" class="image" src="/assets/logo.svg">
+            <img width="150" class="image" src="/assets/logo.svg" routerLink="/home">
             <!--signup -form-->
             <form class="centerAll" style="padding-bottom: 15px" [formGroup]="signupForm" (ngSubmit)="signup()">
                 <!--username-->
