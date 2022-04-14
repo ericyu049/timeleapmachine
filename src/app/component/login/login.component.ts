@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
         this.authService.login(this.loginForm.value).subscribe({
             next: (data: LoginResponse) => {
                 if (data.rspCde === 0) {
-                
+                    //navigate 
                 }
             },
             error: (error) => console.log('error: ', error),
