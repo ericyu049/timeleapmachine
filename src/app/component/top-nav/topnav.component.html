@@ -4,6 +4,6 @@
         <a mat-flat-button routerLink="/home">HOME</a>
         <a mat-flat-button>ABOUT US</a>
         <a mat-flat-button routerLink="/dashboard">DASHBOARD</a>
-        <a mat-flat-button routerLink="/login">LOGIN/SIGN UP</a>
+        <a mat-flat-button routerLink="/login" *ngIf="!isLoggedIn">LOGIN/SIGN UP</a>
     </div>
 </div>

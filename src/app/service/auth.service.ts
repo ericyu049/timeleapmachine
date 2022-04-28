@@ -10,6 +10,9 @@ export class AuthService {
     login(request: LoginRequest): Observable<LoginResponse> {
         return this.http.post<LoginResponse>('/auth/login', request, { reportProgress: true, responseType: "json" });
     }
+    checkLoggedin() {
+        return this.http.post('/auth/isLoggedin', { reportProgress: true, responseType: "json" });
+    }
     signup(request: SignUpRequest): Observable<SignUpResponse> {
         return this.http.post<SignUpResponse>('/auth/signup', request, { reportProgress: true, responseType: "json" });
     }

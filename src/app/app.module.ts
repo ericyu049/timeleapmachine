@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CookieService } from 'ngx-cookie-service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
@@ -13,6 +14,7 @@ import { TopnavComponent } from './component/top-nav/topnav.component';
 import { MaterialModule } from './material.module';
 import { AppService } from './service/app.service';
 import { AuthService } from './service/auth.service';
+import { AuthGuardService } from './service/authguard.service';
 
 
 @NgModule({
@@ -34,8 +36,10 @@ import { AuthService } from './service/auth.service';
 		HttpClientModule
 	],
 	providers: [
-		{ provide: AuthService, useClass: AuthService },
-		{ provide: AppService, useClass: AppService }
+		AuthService,
+		AuthGuardService,
+		AppService,
+		CookieService
 	],
 	bootstrap: [AppComponent]
 })
