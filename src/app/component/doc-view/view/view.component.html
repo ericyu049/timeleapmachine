@@ -1,0 +1,37 @@
+<div *ngIf="!pdfjsDoneLoading" class="center column-align" style="min-height: 400px">
+    <mat-progress-spinner style="margin: 0 auto" mode="indeterminate" strokeWidth="5" [diameter]="50">
+    </mat-progress-spinner>
+    <label style="padding-top: 5px;">Loading Document...</label>
+</div>
+<div *ngIf="!hasError" [hidden]="!pdfjsDoneLoading" class="column-align center" style="height: 100%;">
+    <div style="height: 100%; width: 100%;">
+        <div class="toolbar">
+            <div class="left">
+                <button mat-icon-button (click)="zoomIn()" matTooltip="Zoom In">
+                    <mat-icon>zoom_in</mat-icon>
+                </button>
+                <button mat-icon-button (click)="zoomOut()" matTooltip="Zoom Out">
+                    <mat-icon>zoom_out</mat-icon>
+                </button>
+            </div>
+            <div class="right">
+                <button mat-icon-button matTooltip="Fax">
+                    <mat-icon>fax</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Print">
+                    <mat-icon>print</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Share">
+                    <mat-icon>share</mat-icon>
+                </button>
+                <button mat-icon-button (click)="download()" matTooltip="Local Download">
+                    <mat-icon>download</mat-icon>
+                </button>
+                <button mat-icon-button (click)="save()" matTooltip="Online Save">
+                    <mat-icon>save</mat-icon>
+                </button>
+            </div>
+        </div>
+        <div #container id="container" style="height: calc(100% - 45px); width: 100%; background-color: #555555; overflow: auto;"></div>
+    </div>
+</div>

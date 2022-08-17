@@ -7,6 +7,9 @@ import { CookieService } from 'ngx-cookie-service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { IndexComponent } from './component/doc-view/index/index.component';
+import { NotesComponent } from './component/doc-view/notes/notes.component';
+import { ViewComponent } from './component/doc-view/view/view.component';
 import { HomeComponent } from './component/home/home.component';
 import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
@@ -24,7 +27,10 @@ import { AuthGuardService } from './service/authguard.service';
 		LoginComponent,
 		DashboardComponent,
 		TopnavComponent,
-		SignupComponent
+		SignupComponent,
+		ViewComponent,
+		IndexComponent,
+		NotesComponent
 	],
 	imports: [
 		AppRoutingModule,

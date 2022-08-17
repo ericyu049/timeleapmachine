@@ -1,0 +1,19 @@
+.wrapper {
+    padding: 15px;
+    .list {
+        align-items: flex-start;
+        .item {
+            justify-content: center;
+            width: auto;
+            height: 50px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            .key {
+                font-size: 14px;
+                color: #929292;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+    }
+}

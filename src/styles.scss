@@ -37,3 +37,16 @@ $timeleapmachine-theme: mat.define-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.row-align {
+  display: flex;
+  flex-direction: row;
+}
+.column-align {
+  display: flex;
+  flex-direction: column;
+}
