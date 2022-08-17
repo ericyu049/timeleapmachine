@@ -1,13 +1,13 @@
 .wrapper {
     padding: 15px;
     width: calc(100% - 30px);
-    .form {
-        width: 100%;
-    }
+
     .table {
         width: 100%;
         padding-top: 15px;
-        .mat-column-date {
+        .mat-column-docId,
+        .mat-column-upload_date,
+        .mat-column-name {
             width: 150px;
             min-width: 150px;
             max-width: 200px;
@@ -15,7 +15,8 @@
         .mat-header-cell {
             background-color: #e6ecff;
         }
-        .mat-row, .mat-header-row {
+        .mat-row,
+        .mat-header-row {
             height: 45px;
         }
     }

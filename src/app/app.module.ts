@@ -7,6 +7,8 @@ import { CookieService } from 'ngx-cookie-service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { AttachmentComponent } from './component/doc-view/attachment/attachment.component';
+import { AuditComponent } from './component/doc-view/audit/audit.component';
 import { IndexComponent } from './component/doc-view/index/index.component';
 import { NotesComponent } from './component/doc-view/notes/notes.component';
 import { ViewComponent } from './component/doc-view/view/view.component';
@@ -30,7 +32,9 @@ import { AuthGuardService } from './service/authguard.service';
 		SignupComponent,
 		ViewComponent,
 		IndexComponent,
-		NotesComponent
+		NotesComponent,
+		AuditComponent,
+		AttachmentComponent
 	],
 	imports: [
 		AppRoutingModule,

@@ -1,9 +1,6 @@
 .wrapper {
     padding: 15px;
     width: calc(100% - 30px);
-    .form {
-        width: 100%;
-    }
     .table {
         width: 100%;
         padding-top: 15px;
@@ -15,7 +12,8 @@
         .mat-header-cell {
             background-color: #e6ecff;
         }
-        .mat-row, .mat-header-row {
+        .mat-row,
+        .mat-header-row {
             height: 45px;
         }
     }

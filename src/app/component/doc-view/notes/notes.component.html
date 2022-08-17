@@ -6,7 +6,8 @@
         <button mat-raised-button color="primary" style="align-self: flex-end" [disabled]="!noteForm.valid"
             (click)="submit()">Submit</button>
     </form>
-    <table mat-table [dataSource]="comments" class="table">
+    <mat-paginator [pageSize]="5" [showFirstLastButtons]="true" [hidePageSize]="true"></mat-paginator>
+    <table mat-table [dataSource]="dataSource" class="table">
         <ng-container matColumnDef="date">
             <th mat-header-cell *matHeaderCellDef>Date/Time</th>
             <td mat-cell *matCellDef="let element">{{element.date}}</td>
