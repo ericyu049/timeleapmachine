@@ -7,6 +7,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { DocCenterComponent } from './component/doc-center/doccenter.component';
 import { AttachmentComponent } from './component/doc-view/attachment/attachment.component';
 import { AuditComponent } from './component/doc-view/audit/audit.component';
 import { IndexComponent } from './component/doc-view/index/index.component';
@@ -34,7 +35,8 @@ import { AuthGuardService } from './service/authguard.service';
 		IndexComponent,
 		NotesComponent,
 		AuditComponent,
-		AttachmentComponent
+		AttachmentComponent,
+		DocCenterComponent
 	],
 	imports: [
 		AppRoutingModule,

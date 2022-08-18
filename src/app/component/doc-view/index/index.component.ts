@@ -13,6 +13,7 @@ export class IndexComponent {
         upload_date: '2022/08/16 21:55:00',
         modified: '2022/08/16 22:27:00',
         page_count: 2,
+        file_size: '2.3MB',
         editable: true
     }
 }
