@@ -3,6 +3,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
 import { MatPaginator } from "@angular/material/paginator";
 import { MatTableDataSource } from "@angular/material/table";
 import { Document } from "src/app/model/document.model";
+import * as openDocObs from 'src/app/service/opendoc.service';
 
 @Component({
     selector: 'doccenter-comp',
@@ -36,6 +37,7 @@ export class DocCenterComponent implements OnInit, AfterViewInit {
     columns: string[] = ['select', 'name', 'owner', 'last_modified', 'docId', 'file_size'];
     selection = new SelectionModel<Document>(true, []);
     dataSource: MatTableDataSource<Document>;
+    showDoc: boolean = false;
     @ViewChild(MatPaginator) paginator: MatPaginator;
 
     constructor() { }
@@ -58,5 +60,10 @@ export class DocCenterComponent implements OnInit, AfterViewInit {
             return;
         }
         this.selection.select(...this.dataSource.data);
+    }
+    openDocument(document) {
+        console.log('Document: ', document);
+        // openDocObs.openDoc.next(true);
+        this.showDoc = true;
     }
 }
