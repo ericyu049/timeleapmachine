@@ -38,9 +38,18 @@ export class DocCenterComponent implements OnInit, AfterViewInit {
     selection = new SelectionModel<Document>(true, []);
     dataSource: MatTableDataSource<Document>;
     showDoc: boolean = false;
-    @ViewChild(MatPaginator) paginator: MatPaginator;
+    selectedDocId: string;
+    @ViewChild('paginator') paginator: MatPaginator;
 
-    constructor() { }
+    constructor() { 
+        openDocObs.openDoc$obs.subscribe(
+            (next) => {
+                if (!next) {
+                    this.showDoc = false;
+                }
+            }
+        )
+    }
 
     ngOnInit() {
         this.dataSource = new MatTableDataSource(this.documents);
@@ -63,7 +72,7 @@ export class DocCenterComponent implements OnInit, AfterViewInit {
     }
     openDocument(document) {
         console.log('Document: ', document);
-        // openDocObs.openDoc.next(true);
+        this.selectedDocId = document.docId;
         this.showDoc = true;
     }
 }

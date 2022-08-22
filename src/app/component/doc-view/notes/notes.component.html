@@ -1,12 +1,4 @@
 <div class="wrapper">
-    <form class="form column-align center" [formGroup]="noteForm">
-        <mat-form-field appearance="outline" style="width: 100%">
-            <textarea matInput formControlName="note" placeholder="Enter comment here..."></textarea>
-        </mat-form-field>
-        <button mat-raised-button color="primary" style="align-self: flex-end" [disabled]="!noteForm.valid"
-            (click)="submit()">Submit</button>
-    </form>
-    <mat-paginator [pageSize]="5" [showFirstLastButtons]="true" [hidePageSize]="true"></mat-paginator>
     <table mat-table [dataSource]="dataSource" class="table">
         <ng-container matColumnDef="date">
             <th mat-header-cell *matHeaderCellDef>Date/Time</th>
@@ -19,4 +11,12 @@
         <tr mat-header-row *matHeaderRowDef="columns"></tr>
         <tr mat-row *matRowDef="let row; columns: columns;"></tr>
     </table>
+    <mat-paginator [pageSize]="5" [showFirstLastButtons]="true" [hidePageSize]="true"></mat-paginator>
+    <form class="form column-align center" [formGroup]="noteForm">
+        <mat-form-field appearance="outline" style="width: 100%">
+            <textarea matInput formControlName="note" placeholder="Enter comment here..."></textarea>
+        </mat-form-field>
+        <button mat-raised-button color="primary" style="align-self: flex-end" [disabled]="!noteForm.valid"
+            (click)="submit()">Submit</button>
+    </form>
 </div>
